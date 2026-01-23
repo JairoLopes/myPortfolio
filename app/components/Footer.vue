@@ -73,7 +73,7 @@
               {{ $t("footer.codigoTitulo") }}
             </h4>
             <a
-              href="https://github.com/JairoLopes/MeuPortfolio"
+              href="https://github.com/JairoLopes/myPortfolio"
               target="_blank"
               rel="noopener noreferrer"
               class="flex items-center gap-2 group"
