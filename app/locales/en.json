@@ -1,0 +1,340 @@
+{
+  "navbar": {
+    "logo": "Portfolio",
+    "menu": {
+      "home": "Home",
+      "sobre": "About",
+      "experiencia": "Experience",
+      "templates": "Templates",
+      "projetos": "Projects",
+      "performance": "Performance",
+      "depoimentos": "Testimonials",
+      "contato": "Contact"
+    },
+    "ariaLabels": {
+      "menuToggle": "Toggle navigation menu"
+    }
+  },
+
+  "Digitando": {
+    "cargo": "Front-End Developer"
+  },
+
+  "home": {
+    "descricao": "Frontend Developer specialized in <strong class='strong2'>Vue.js</strong>, combining technologies such as <strong class='text-myWhite'>Tailwind CSS</strong>, <strong class='strong2'>Nuxt</strong>, <strong class='text-myWhite'>Nuxt UI</strong> and <strong class='!text-myWhite'>TypeScript</strong> to create modern and responsive interfaces.",
+    "ver": "View",
+    "templates": "Templates",
+    "projetos": "Projects",
+    "contato": "Contact",
+    "social": "Professional social networks"
+  },
+
+  "sobre": {
+    "titulo": "About me",
+    "formacao": "Education and Skills",
+    "descricao": "Graduated in <strong class='!text-myWhite'>computer networks</strong>, <strong class='!text-myWhite'>specialized</strong> in <strong class='!text-myWhite'>web development</strong> in the <strong class='strong2'>Vue.js</strong>/<strong class='strong2'>Nuxt</strong> ecosystem, focusing on high performance and Core Web Vitals. Mastery of rendering strategies (SSR, SSG and Late Hydration) to optimize Total Blocking Time (TBT) and interactivity on mobile devices. Expertise in <strong class='strong2'>Nuxt UI</strong>, <strong class='!text-myWhite'>Tailwind CSS</strong>, <strong class='!text-myWhite'>TypeScript</strong> and state management with <strong class='!text-myWhite'>Pinia</strong>. Developing modern and scalable applications, applying Clean Code and modular design patterns, creating elegant, responsive and high-performance interfaces, developing reusable components and applying engaging animations for dynamic experiences.",
+    "tecnologias": "Technologies",
+    "niveis": {
+      "especialista": "Expert",
+      "intermediario": "Intermediate",
+      "basico": "Basic"
+    }
+  },
+
+  "templates": {
+    "tituloSecao": "Ready Templates",
+    "subtituloSecao": "Professional and fully customizable templates to speed up your development",
+    "verDemo": "Demo",
+    "comprarAgora": "Buy",
+    "destaque": "Best Seller",
+    "personalizacao": "Need specific customizations?",
+    "entreEmContato": "Contact me",
+    "lista": [
+      {
+        "id": 1,
+        "nome": "VueDash",
+        "desc": "Complete admin dashboard with Vue.js 3, TypeScript and Tailwind CSS. Perfect for management systems.",
+        "tech_usadas": [
+          "Vue.js 3",
+          "TypeScript",
+          "Tailwind CSS",
+          "Pinia",
+          "Vue Router"
+        ],
+        "recursos": [
+          "Responsive layout",
+          "Reusable components",
+          "Light/dark mode",
+          "Clean and modular project structure",
+          "Integrated authentication"
+        ],
+        "demo": "https://lopes-vuedash.vercel.app/",
+        "comprar": "https://payhip.com/b/mz6eJ",
+        "preco": "$17",
+        "preco_original": "$25",
+        "licenca": "Single license for 1 project",
+        "destaque": false
+      }
+    ]
+  },
+
+  "experiencia": {
+    "tituloSecao": "Professional Experience",
+    "subtituloSecao": "Below is a bit of my professional history in the technology area.",
+    "experiencias": [
+      {
+        "titulo": "Front-end Developer",
+        "empresa": "Freelancer",
+        "desc": "Development of responsive web interfaces using Vue.js/Nuxt, Tailwind and Typescript to create reusable components for different devices.",
+        "ano": "2025",
+        "direction": "left"
+      },
+      {
+        "titulo": "Front-end Programmer",
+        "empresa": "City Hall of Olinda",
+        "desc": "Performing adjustments and improvements in the front-end of corporate systems.",
+        "ano": "2022",
+        "direction": "right"
+      },
+      {
+        "titulo": "Information Security Technician",
+        "empresa": "Bidweb Security",
+        "desc": "Working with the development/maintenance of Python scripts in containers, and threat monitoring.",
+        "ano": "2020",
+        "direction": "left"
+      },
+      {
+        "titulo": "Help Desk",
+        "empresa": "Secretary of Finance",
+        "desc": "Technical support provision.",
+        "ano": "2017",
+        "direction": "right"
+      }
+    ]
+  },
+
+  "projetos": {
+    "tituloSecao": "My Projects",
+    "tecnologiasUsadas": "Technologies used:",
+    "verProjeto": "View Project",
+    "projetoReal": "Real Project",
+    "projetoSimulado": "Simulated Project",
+    "lista": [
+      {
+        "nome": "Personal Site",
+        "desc": "Complete landing page for personal trainer portfolio and hiring, showcasing services, plans, responsively, performatively, and professionally.",
+        "tech_usadas": ["React", "Tailwind CSS", "TypeScript"],
+        "link_projeto": "https://talles-personal.vercel.app/",
+        "github": "https://github.com/JairoLopes/personal_trainer",
+        "real": true,
+        "real_string": "Real Project",
+        "finish": true
+      },
+      {
+        "nome": "Digital Menu",
+        "desc": "Fully customizable and reusable online menu project, where routes are created dynamically and automatically from the menu categories. Its optimized structure facilitates customization and maintenance, being an elegant and professional solution for any restaurant or snack bar.",
+        "tech_usadas": ["Vue.js", "Vue Router", "Tailwind CSS", "TypeScript"],
+        "link_projeto": "https://cardapio-exemplo.vercel.app/",
+        "github": "https://github.com/JairoLopes/cardapio",
+        "real": true,
+        "real_string": "Real Project",
+        "finish": true
+      },
+      {
+        "nome": "Tidetrack",
+        "desc": "Web platform for global maritime monitoring. It displays real-time data on wave height, temperature and direction, as well as sea level. Connects to the Open-Meteo Marine Weather API for maritime data and the OpenStreetMap Nominatim API for location information and map search.",
+        "tech_usadas": ["React", "Tailwind CSS", "TypeScript", "API Rest"],
+        "link_projeto": "https://tidetrack-sea.vercel.app/",
+        "github": "https://github.com/JairoLopes/Tidetrack",
+        "real": true,
+        "real_string": "Real Project",
+        "finish": true
+      },
+      {
+        "nome": "Astrolobby",
+        "desc": "Web platform for astronomical exploration, acting as a hub for news and educational content. Integrates official NASA information by connecting the APOD API, and offers instant translation into Portuguese by connecting a second API (DeepL).",
+        "tech_usadas": [
+          "React",
+          "Tailwind CSS",
+          "TypeScript",
+          "API Rest",
+          "React router"
+        ],
+        "link_projeto": "https://astrolobby.vercel.app/",
+        "github": "https://github.com/JairoLopes/Astrolobby",
+        "real": true,
+        "real_string": "Real Project",
+        "finish": true
+      },
+      {
+        "nome": "E-commerce - Nuphar",
+        "desc": "Front-end of an e-commerce platform for selling marine algae for aquariums",
+        "tech_usadas": ["React", "Tailwind CSS", "TypeScript"],
+        "link_projeto": "https://nuphar.vercel.app/",
+        "github": "https://github.com/JairoLopes/Ecommerce",
+        "real": false,
+        "real_string": "Fictional Project",
+        "finish": true
+      },
+      {
+        "nome": "E-commerce",
+        "desc": "(IN DEVELOPMENT)",
+        "tech_usadas": ["React", "Tailwind CSS", "TypeScript"],
+        "link_projeto": "#",
+        "github": "",
+        "real": false,
+        "real_string": "Real Project",
+        "finish": false
+      }
+    ]
+  },
+
+  "performance": {
+    "tituloSecao": "Performance Architecture",
+    "subtituloSecao": "Advanced strategies I use to improve page performance, especially on mobile devices.",
+    "implementacao": {
+      "titulo": "Implementation in Real Projects",
+      "descricao": "In templates and client projects, I apply a combination of:",
+      "resultado": {
+        "titulo": "Measurable Result",
+        "descricao": "Projects with <strong class='text-thirdTheme'>LCP < 2.5s</strong> and <strong class='text-thirdTheme'>CLS ≈ 0</strong> on simulated 3G connections, ensuring excellent mobile experience and technical SEO."
+      }
+    },
+    "testarPerformance": "Test Page Performance",
+    "nav": {
+      "tecnicas": "Optimization",
+      "glossario": "Glossary"
+    },
+    "index": {
+      "titulo": "Advanced Performance Techniques",
+      "descricao": "These strategies are fundamental to creating fast and responsive web experiences. Each technique addresses a specific aspect of optimization, from intelligent loading to efficient rendering. Combined, they guarantee excellent <strong class='text-thirdTheme'>Core Web Vitals</strong>(They are Google metrics that measure performance.) and a superior experience especially on mobile devices.",
+      "metricas": {
+        "lcp": "Excellent",
+        "cls": "Stable",
+        "fcp": "Fast",
+        "tbt": "Responsive"
+      },
+      "tecnica1": {
+        "titulo": "Lazy Hydration",
+        "impacto": "Improves TBT by 40-60%",
+        "descricao": "Technique that delays hydration of non-critical components until they are needed, significantly reducing <strong class='text-thirdTheme'>Total Blocking Time (TBT)</strong> and improving <strong class='text-thirdTheme'>Interactive Time</strong> on mobile devices.",
+        "ondeAplicar": "Where to apply:",
+        "pontos": [
+          "Components below the fold (outside the initial screen)",
+          "Secondary interactive elements",
+          "Modals, tooltips and non-essential UI elements"
+        ],
+        "resultado": {
+          "titulo": "Measurable Result",
+          "descricao": "45ms reduction in TBT and 15% improvement in Speed Index"
+        }
+      },
+      "tecnica2": {
+        "titulo": "Strategic Lazy Loading",
+        "impacto": "FCP up to 3.2s",
+        "descricao": "Strategic resource loading combining <strong class='text-thirdTheme'>code splitting</strong>, <strong class='text-thirdTheme'>strategic preload</strong> and <strong class='text-thirdTheme'>predictive loading</strong> to optimize each loading phase.",
+        "estrategias": "Integrated strategies:",
+        "pontos": [
+          "<strong>Code Splitting</strong> by route and component",
+          "<strong>Preload</strong> of critical resources above the fold",
+          "<strong>Predictive Load</strong> based on navigation patterns"
+        ],
+        "metricas": {
+          "tbt": "TBT Reduction",
+          "fcp": "Average FCP",
+          "score": "Performance Score",
+          "bundle": "Bundle GZIP"
+        }
+      },
+      "glossarioLink": {
+        "titulo": "Need to understand a technical term?",
+        "descricao": "Consult the <nuxt-link to='/glossario'><strong class='text-thirdTheme'>Technical Glossary</strong></nuxt-link> for simple explanations of all concepts mentioned above."
+      }
+    },
+    "glossario": {
+      "titulo": "Performance Glossary",
+      "subtitulo": "Technical terms explained for laymen",
+      "itens": [
+        {
+          "term": "Lazy Hydration",
+          "category": "Vue/Nuxt",
+          "shortDescription": "Loads components only when needed",
+          "definition": "Delays the execution of component JavaScript until they are visible on screen, reducing initial processing.",
+          "impact": "Reduces TBT up to 60%"
+        },
+        {
+          "term": "Code Splitting",
+          "category": "Performance",
+          "shortDescription": "Divides code into smaller parts",
+          "definition": "Separates the application into chunks that are loaded on demand, instead of all at once.",
+          "impact": "Improves FCP and LCP"
+        },
+        {
+          "term": "Tree Shaking",
+          "category": "Build",
+          "shortDescription": "Removes unused code",
+          "definition": "Automatically eliminates functions and components that are never used in the final project.",
+          "impact": "Bundle up to 40% smaller"
+        },
+        {
+          "term": "SSR",
+          "category": "Rendering",
+          "shortDescription": "Renders on the server",
+          "definition": "Generates HTML on the server before sending it to the browser, improving SEO and first impression.",
+          "impact": "Improved SEO"
+        },
+        {
+          "term": "CLS",
+          "category": "Metric",
+          "shortDescription": "Visual stability",
+          "definition": "Measures how much page elements move during loading. Ideal: below 0.1.",
+          "impact": "Stable experience"
+        },
+        {
+          "term": "FCP",
+          "category": "Metric",
+          "shortDescription": "First visible content",
+          "definition": "Time until the first text or image appears. Good: below 1.8 seconds.",
+          "impact": "Perception of speed"
+        },
+        {
+          "term": "LCP",
+          "category": "Metric",
+          "shortDescription": "Largest element loaded",
+          "definition": "Time to load the largest visible element. Excellent: below 2.5 seconds.",
+          "impact": "Fast main content"
+        },
+        {
+          "term": "TBT (Total Blocking Time)",
+          "category": "Metric",
+          "shortDescription": "Total blocking time",
+          "definition": "Sum of all periods where the page does not respond to interactions during loading.",
+          "impact": "Page responsiveness"
+        },
+        {
+          "term": "Strategic Preload",
+          "category": "Optimization",
+          "shortDescription": "Loads resources in advance",
+          "definition": "Tells the browser to download important resources before they are requested.",
+          "impact": "Faster navigation"
+        },
+        {
+          "term": "Predictive Load",
+          "category": "Intelligent",
+          "shortDescription": "Predicts user needs",
+          "definition": "Anticipates which resources the user will need based on standard behavior.",
+          "impact": "Instant experience"
+        }
+      ],
+      "footer": {
+        "conceitos": "essential concepts",
+        "clique": "Click for details"
+      }
+    }
+  },
+
+  "footer": {
+    "tecnologiasTitulo": "Page developed with:",
+    "codigoTitulo": "Page code"
+  }
+}

@@ -1,0 +1,172 @@
+<template>
+  <section
+    id="projects"
+    class="min-h-screen flex flex-col items-center justify-center relative overflow-hidden px-4 sm:px-6 md:px-8 py-12 md:py-20"
+  >
+    <!-- Fundo extremamente clean -->
+    <div class="absolute inset-0 -z-10 bg-navBlack"></div>
+
+    <!-- Gradiente sutil apenas nas bordas -->
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute inset-0 border border-white/5 rounded-none"></div>
+    </div>
+
+    <!-- Container principal -->
+    <div class="text-center z-10 w-full max-w-5xl mx-auto relative">
+      <!-- Título da seção -->
+      <h2
+        v-motion="animations.slideUp"
+        class="text-center text-2xl sm:text-3xl font-bold mb-16 gradient-text"
+      >
+        {{ $t("projetos.tituloSecao") }}
+      </h2>
+
+      <!-- Container Grid que engloba todos os cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+        <!-- CARD INDIVIDUAL -->
+        <div
+          v-for="(item, index) in data_projects"
+          :key="index"
+          v-motion="staggerAnimations.scaleIn(index)"
+          class="group p-2 relative"
+        >
+          <!-- Card extremamente minimalista -->
+          <div
+            class="relative h-full bg-gradient-to-b from-white/3 to-white/1 rounded-none border-t border-white/10 overflow-hidden transition-all duration-500 hover:border-t-thirdTheme/30"
+          >
+            <!-- Número do projeto sutil -->
+            <div class="absolute top-2 left-3 text-2xl font-thin text-white">
+              <!-- SE O NUMERO DO PROJETO FOR MAIOR OU IGUAL A 10: INDEX, SE NAO: 0+INDEX -->
+              {{ index + 1 >= 10 ? `${index + 1}` : `0${index + 1}` }}
+            </div>
+
+            <!-- Conteúdo principal -->
+            <div class="flex flex-col h-full p-8 pt-12">
+              <!-- Título e descrição -->
+              <div class="mb-8 grow flex flex-col">
+                <h3 class="text-lg font-medium text-myWhite">
+                  {{ item.nome }}
+                </h3>
+
+                <p
+                  class="text-sm blu text-left text-myWhite/60 leading-relaxed mb-2 mt-5 flex items-end grow"
+                >
+                  {{ item.desc }}
+                </p>
+              </div>
+
+              <!-- Tecnologias -->
+              <div
+                :class="
+                  item.finish
+                    ? 'mb-10 grow flex flex-col justify-end'
+                    : 'blur-sm'
+                "
+              >
+                <!-- titulo tecnologias usadas -->
+                <p
+                  class="mb-3 text-xs text-thirdTheme/70 font-medium uppercase tracking-wider"
+                >
+                  {{ $t("projetos.tecnologiasUsadas") }}
+                </p>
+
+                <!-- Container das tecnologias -->
+                <div class="flex flex-wrap gap-2 mt-3">
+                  <span
+                    v-for="(tech, techIndex) in item.tech_usadas"
+                    :key="techIndex"
+                    class="px-3 py-1.5 text-xs font-medium rounded-full border border-white/10 bg-gradient-to-br from-white/5 to-white/1 text-myWhite/80 hover:bg-secondaryTheme/10 hover:text-secondaryTheme hover:border-secondaryTheme/30 transition-all duration-300 group/tech relative overflow-hidden"
+                  >
+                    <!-- Efeito de brilho sutil no hover -->
+                    <div
+                      class="absolute inset-0 bg-gradient-to-r from-secondaryTheme/0 via-secondaryTheme/10 to-secondaryTheme/0 translate-x-[-100%] group-hover/tech:translate-x-[100%] transition-transform duration-700"
+                    ></div>
+
+                    <!-- Texto com z-index para ficar acima do efeito -->
+                    <span class="relative z-10">{{ tech }}</span>
+                  </span>
+                </div>
+              </div>
+
+              <!-- Rodapé com ações com cores -->
+              <div
+                class="flex items-center justify-between border-t border-white/5 pt-6"
+              >
+                <!-- Links -->
+                <div class="flex items-center gap-4">
+                  <a
+                    :href="item.link_projeto"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-[15px] flex items-center gap-1.5 p-2 group/link"
+                    :class="
+                      item.finish
+                        ? 'text-slate-900 gradient-btn rounded'
+                        : 'text-white/30 pointer-events-none'
+                    "
+                  >
+                    <!-- ícone de link ao lado de ver projeto -->
+                    <Icon
+                      name="heroicons:link"
+                      class="w-4 h-4 group-hover/link:rotate-45 transition-all duration-300"
+                    />
+                    <span class="font-medium">{{
+                      $t("projetos.verProjeto")
+                    }}</span>
+                  </a>
+                </div>
+
+                <!-- categorizando real ou fictício sutil com cor -->
+                <div
+                  class="text-xs font-medium px-2 py-1 rounded"
+                  :class="
+                    item.real
+                      ? 'bg-thirdTheme/10 text-thirdTheme/90'
+                      : 'bg-amber-500/10 text-amber-400/70'
+                  "
+                >
+                  {{ item.real_string }}
+                </div>
+              </div>
+            </div>
+
+            <!-- Linha decorativa lateral do card com cor no hover -->
+            <div
+              class="absolute left-0 top-0 w-px h-full bg-gradient-to-b from-transparent via-white/5 to-transparent group-hover:via-thirdTheme/60 transition-all duration-500"
+            ></div>
+          </div>
+
+          <!-- LINK PARA O GITHUB EM POSITION ABSOLUTE -->
+          <a :href="item.github" target="_blank" class="absolute top-7 right-7">
+            <Icon name="ion:logo-github" class="text-2xl" />
+          </a>
+        </div>
+      </div>
+
+      <!-- TRAÇO VERDE AO NO FINAL DA SEÇÃO-->
+      <div
+        class="w-[80%] h-[2px] bg-gradient-to-r from-transparent via-thirdTheme/60 to-transparent mx-auto mt-16"
+      ></div>
+    </div>
+  </section>
+</template>
+
+<script setup lang="ts">
+import { computed } from "vue";
+import { useI18n } from "vue-i18n";
+
+const { tm } = useI18n();
+
+const data_projects = computed(() => {
+  return tm("projetos.lista") as Array<{
+    nome: string;
+    desc: string;
+    tech_usadas: string[];
+    link_projeto: string;
+    github: string;
+    real: boolean;
+    real_string: string;
+    finish: boolean;
+  }>;
+});
+</script>

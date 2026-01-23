@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  background-color: #000000; /* Cor durante a transição */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@theme {
+  /* 2dd4bf */
+  --color-mainTheme: #ecfeff;
+  --color-secondaryTheme: #00cc99;
+  --color-thirdTheme: #2dd4bf;
+  --color-fourthTheme: #66ff99;
+
+  --color-deepBlue: #050505;
+  --color-navBlack: #000000;
+  --color-myWhite: #e2e6e9;
+  --font-SpaceGrotesk: "Space Grotesk", sans-serif;
+
+  --breakpoint-ssm: 300px;
+  --breakpoint-smm: 390px;
+
+  /* ANIMAÇÕES */
+  /* Animação de carregamento */
+  --animate-loading: loading 0.8s ease-in-out infinite;
+  @keyframes loading {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(250%);
+    }
+  }
+
+  /* Efeito de cursor piscando */
+  --animate-blink: blink 0.8s step-end infinite;
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+  /* Animação de giro suave */
+  --animate-calmSpin: calm-spin 1.5s ease-in-out infinite;
+  @keyframes calm-spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    80% {
+      transform: rotate(360deg); /* Giro rápido */
+    }
+    90% {
+      transform: rotate(360deg); /* Suavização no final */
+      animation-timing-function: ease-out;
+    }
+    100% {
+      transform: rotate(360deg); /* Pequena pausa antes do próximo giro */
+    }
+  }
+
+  /* Animação balanço */
+  --animate-balanco: balanco 1.5s ease-in-out infinite;
+  @keyframes balanco {
+    0%,
+    100% {
+      transform: rotate(-3deg);
+    }
+    50% {
+      transform: rotate(3deg);
+    }
+  }
+
+  /* Animações adicionais do LoadingScreen */
+  @keyframes progress {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0) translateX(0);
+    }
+    100% {
+      transform: translateY(-20px) translateX(10px);
+    }
+  }
+
+  @keyframes orbit {
+    0% {
+      transform: rotate(0deg) translateX(40px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(40px) rotate(-360deg);
+    }
+  }
+}
+
+/* Classes utilitárias personalizadas */
+.strong2 {
+  @apply text-thirdTheme italic;
+}
+
+/* Gradiente para botões */
+.gradient-btn {
+  @apply bg-gradient-to-r from-thirdTheme/80 to-fourthTheme/80
+         hover:from-thirdTheme/90 hover:to-fourthTheme/90
+         transition-all duration-500 shadow-lg shadow-thirdTheme/30
+         hover:shadow-thirdTheme/50;
+}
+
+/* Gradiente para textos */
+.gradient-text-theme {
+  @apply bg-gradient-to-r from-thirdTheme to-fourthTheme
+         bg-clip-text text-transparent;
+}
+
+/* Efeito de brilho sutil */
+.glow-effect {
+  @apply shadow-[0_0_30px_rgba(0,204,153,0.15)];
+}
+
+/* Animações personalizadas */
+.animate-spin-slow {
+  animation: calm-spin 3s linear infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.animate-progress {
+  animation: progress 1.5s ease-in-out infinite;
+}
+
+/*-------------------- ANIMAÇÃO DE ROTAS ----------------------------- */
+
+/* Estado ativo da animação (duração e timing) */
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.4s;
+}
+
+/* Estado inicial da entrada e estado final da saída */
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  filter: blur(1rem); /* Um efeito de desfoque elegante */
+  transform: translateY(20px); /* Leve movimento para cima */
+}
