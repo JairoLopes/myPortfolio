@@ -168,7 +168,7 @@ const { locale } = useI18n();
 
 const msgPt = encodeURIComponent("Olá, gostaria de fazer um site com você.");
 const msgEn = encodeURIComponent(
-  "Hello, I would like to make a website with you."
+  "Hello, I would like to make a website with you.",
 );
 const link = {
   pt: `https://wa.me/5581997052877?text=${msgPt}`,

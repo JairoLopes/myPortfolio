@@ -123,9 +123,9 @@
       {
         "nome": "Personal Site",
         "desc": "Complete landing page for personal trainer portfolio and hiring, showcasing services, plans, responsively, performatively, and professionally.",
-        "tech_usadas": ["React", "Tailwind CSS", "TypeScript"],
+        "tech_usadas": ["Vue.js", "Nuxt", "Tailwind CSS", "TypeScript"],
         "link_projeto": "https://talles-personal.vercel.app/",
-        "github": "https://github.com/JairoLopes/personal_trainer",
+        "github": "https://github.com/JairoLopes/talles-personal-nuxt",
         "real": true,
         "real_string": "Real Project",
         "finish": true
