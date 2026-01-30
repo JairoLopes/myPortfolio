@@ -64,8 +64,9 @@
                       <span
                         v-for="tech in template.tech_usadas"
                         :key="tech"
-                        class="px-2 py-1 text-xs font-medium rounded-full border border-white/10 bg-white/5 text-myWhite/70"
+                        class="flex items-center gap-1 px-2 py-1 text-xs font-medium rounded-full border border-white/10 bg-white/5 text-myWhite/70"
                       >
+                        <Icon :name="retornaLogo(tech)" />
                         {{ tech }}
                       </span>
                     </div>
@@ -189,12 +190,36 @@ const { tm, locale } = useI18n();
 
 const msgPt = encodeURIComponent("Olá, gostaria de fazer um site com você.");
 const msgEn = encodeURIComponent(
-  "Hello, I would like to make a website with you."
+  "Hello, I would like to make a website with you.",
 );
 const link = {
   pt: `https://wa.me/5581997052877?text=${msgPt}`,
   en: `https://t.me/Lopes_93?text=${msgEn}`,
 };
+
+// Função para obter ícone baseado na tecnologia
+function retornaLogo(icone: string): string {
+  if (icone.toLowerCase() === "vue.js") return "vscode-icons:file-type-vue";
+  if (icone.toLowerCase() === "nuxt") return "material-icon-theme:nuxt";
+  if (icone.toLowerCase() === "tailwind")
+    return "vscode-icons:file-type-tailwind";
+  if (icone.toLowerCase() === "typescript")
+    return "vscode-icons:file-type-typescript-official";
+  if (icone.toLowerCase() === "vue router") return "simple-icons:powerpages";
+  if (icone.toLowerCase() === "api rest")
+    return "streamline-ultimate:coding-apps-website-web-dev-api-cloud-bold";
+  if (icone.toLowerCase() === "react") return "material-icon-theme:react";
+  if (icone.toLowerCase() === "nuxt ui") return "devicon:nuxtjs";
+  if (icone.toLowerCase() === "security") return "heroicons:shield-exclamation";
+  if (icone.toLowerCase() === "troubleshooting")
+    return "heroicons:wrench-screwdriver";
+  if (icone.toLowerCase() === "security") return "heroicons:shield-exclamation";
+  if (icone.toLowerCase() === "javascript") return "openmoji:javascript";
+  if (icone.toLowerCase() === "python") return "devicon:python";
+  if (icone.toLowerCase() === "pinia") return "logos:pinia";
+
+  return "";
+}
 
 const templates = computed(() => {
   return tm("templates.lista") as Array<{

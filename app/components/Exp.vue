@@ -167,8 +167,8 @@
                       ></div>
                       <span class="relative z-10 flex items-center gap-1.5">
                         <Icon
-                          v-if="getTechIcon(tag)"
-                          :name="getTechIcon(tag)"
+                          v-if="retornaLogo(tag)"
+                          :name="retornaLogo(tag)"
                           class="w-3 h-3"
                         />
                         {{ tag }}
@@ -305,67 +305,61 @@ const getExperienceIcon = (titulo: string) => {
 };
 
 // Função para obter ícone baseado na tecnologia
-const getTechIcon = (tech: string) => {
-  const iconMap: Record<string, string> = {
-    "Vue.js": "logos:vue",
-    React: "logos:react",
-    TypeScript: "logos:typescript-icon",
-    Tailwind: "logos:tailwindcss-icon",
-    JavaScript: "logos:javascript",
-    "HTML/CSS": "heroicons:code-bracket-square",
-    Python: "logos:python",
-    Docker: "logos:docker-icon",
-    Security: "heroicons:shield-exclamation",
-    Support: "heroicons:lifebuoy",
-    Responsive: "heroicons:device-phone-mobile",
-    Troubleshooting: "heroicons:wrench-screwdriver",
-    "Customer Service": "heroicons:user-group",
-  };
-  return iconMap[tech];
-};
+function retornaLogo(icone: string): string {
+  if (icone.toLowerCase() === "vue.js") return "vscode-icons:file-type-vue";
+  if (icone.toLowerCase() === "nuxt") return "material-icon-theme:nuxt";
+  if (icone.toLowerCase() === "tailwind")
+    return "vscode-icons:file-type-tailwind";
+  if (icone.toLowerCase() === "typescript")
+    return "vscode-icons:file-type-typescript-official";
+  if (icone.toLowerCase() === "vue router") return "simple-icons:powerpages";
+  if (icone.toLowerCase() === "api rest")
+    return "streamline-ultimate:coding-apps-website-web-dev-api-cloud-bold";
+  if (icone.toLowerCase() === "react") return "material-icon-theme:react";
+  if (icone.toLowerCase() === "nuxt ui") return "devicon:nuxtjs";
+  if (icone.toLowerCase() === "security") return "heroicons:shield-exclamation";
+  if (icone.toLowerCase() === "troubleshooting")
+    return "heroicons:wrench-screwdriver";
+  if (icone.toLowerCase() === "security") return "heroicons:shield-exclamation";
+  if (icone.toLowerCase() === "javascript") return "openmoji:javascript";
+  if (icone.toLowerCase() === "python") return "devicon:python";
+  if (icone.toLowerCase() === "pinia") return "logos:pinia";
+
+  return "";
+}
 
 // Função para obter tags de tecnologia baseadas no título
 const getTechTags = (titulo: string) => {
   const tagsMap: Record<string, string[]> = {
     "Front-end Developer": [
       "Vue.js",
-      "React",
+      "Nuxt",
+      "Nuxt ui",
+      "Pinia",
       "TypeScript",
       "Tailwind",
-      "Responsive",
     ],
     "Desenvolvedor Front-end": [
       "Vue.js",
-      "React",
+      "Nuxt",
+      "Nuxt ui",
+      "Pinia",
       "TypeScript",
       "Tailwind",
-      "Responsive",
     ],
-    "Front-end Programmer": ["JavaScript", "HTML/CSS", "Responsive", "Support"],
-    "Programador Front-end": [
-      "JavaScript",
-      "HTML/CSS",
-      "Responsive",
-      "Support",
-    ],
+    "Front-end Programmer": ["JavaScript", "vue.js", "Support"],
+    "Programador Front-end": ["JavaScript", "vue.js", "tailwind"],
     "Information Security Technician": [
       "Python",
       "Security",
-      "Docker",
       "Troubleshooting",
     ],
     "Técnico em segurança da informação": [
       "Python",
       "Security",
-      "Docker",
       "Troubleshooting",
     ],
-    "Help Desk": [
-      "Support",
-      "Troubleshooting",
-      "Customer Service",
-      "Technical",
-    ],
+    "Help Desk": ["Support", "Troubleshooting", "Technical"],
   };
   return tagsMap[titulo] || ["Web Development", "Technology"];
 };

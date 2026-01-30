@@ -52,9 +52,9 @@
         "nome": "VueDash",
         "desc": "Dashboard administrativo completo com Vue.js 3, TypeScript e Tailwind CSS. Perfeito para sistemas de gerenciamento.",
         "tech_usadas": [
-          "Vue.js 3",
+          "Vue.js",
           "TypeScript",
-          "Tailwind CSS",
+          "Tailwind",
           "Pinia",
           "Vue Router"
         ],
@@ -82,7 +82,7 @@
       {
         "titulo": "Desenvolvedor Front-end",
         "empresa": "Freelancer",
-        "desc": "Desenvolvimento de interfaces web responsivas utilizando Vue.js/Nuxt, Tailwind e Typescript para a criação de componentes reutilizáveis para diferentes dispositivos.",
+        "desc": "Desenvolvimento de interfaces web responsivas utilizando Vue.js, Nuxt, Tailwind e Typescript para a criação de componentes reutilizáveis para diferentes dispositivos.",
         "ano": "2025",
         "direction": "left"
       },
@@ -150,13 +150,7 @@
       {
         "nome": "Astrolobby",
         "desc": "Plataforma web para exploração astronômica, atuando como um hub de notícias e conteúdo educativo. Integra informações oficiais da NASA conectando a API APOD, e oferece tradução instantânea para o português conectando uma segunda API(DeepL).",
-        "tech_usadas": [
-          "React",
-          "Tailwind CSS",
-          "TypeScript",
-          "API Rest",
-          "React router"
-        ],
+        "tech_usadas": ["React", "Tailwind CSS", "TypeScript", "API Rest"],
         "link_projeto": "https://astrolobby.vercel.app/",
         "github": "https://github.com/JairoLopes/Astrolobby",
         "real": true,

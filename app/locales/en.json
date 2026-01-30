@@ -55,9 +55,9 @@
         "nome": "VueDash",
         "desc": "Complete admin dashboard with Vue.js 3, TypeScript and Tailwind CSS. Perfect for management systems.",
         "tech_usadas": [
-          "Vue.js 3",
+          "Vue.js",
           "TypeScript",
-          "Tailwind CSS",
+          "Tailwind",
           "Pinia",
           "Vue Router"
         ],
@@ -153,13 +153,7 @@
       {
         "nome": "Astrolobby",
         "desc": "Web platform for astronomical exploration, acting as a hub for news and educational content. Integrates official NASA information by connecting the APOD API, and offers instant translation into Portuguese by connecting a second API (DeepL).",
-        "tech_usadas": [
-          "React",
-          "Tailwind CSS",
-          "TypeScript",
-          "API Rest",
-          "React router"
-        ],
+        "tech_usadas": ["React", "Tailwind CSS", "TypeScript", "API Rest"],
         "link_projeto": "https://astrolobby.vercel.app/",
         "github": "https://github.com/JairoLopes/Astrolobby",
         "real": true,

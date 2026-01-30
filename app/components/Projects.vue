@@ -83,7 +83,11 @@
                     ></div>
 
                     <!-- Texto com z-index para ficar acima do efeito -->
-                    <span class="relative z-10">{{ tech }}</span>
+                    <span
+                      class="relative z-10 flex items-center justify-center gap-1.5"
+                      ><Icon :name="retornaLogo(tech)" class="text-lg" />
+                      {{ tech }}</span
+                    >
                   </span>
                 </div>
               </div>
@@ -169,4 +173,20 @@ const data_projects = computed(() => {
     finish: boolean;
   }>;
 });
+
+function retornaLogo(icone: string): string {
+  if (icone.toLowerCase() === "vue.js") return "vscode-icons:file-type-vue";
+  if (icone.toLowerCase() === "nuxt") return "material-icon-theme:nuxt";
+  if (icone.toLowerCase() === "tailwind css")
+    return "vscode-icons:file-type-tailwind";
+  if (icone.toLowerCase() === "typescript")
+    return "vscode-icons:file-type-typescript-official";
+  if (icone.toLowerCase() === "vue router") return "simple-icons:powerpages";
+  if (icone.toLowerCase() === "api rest")
+    return "streamline-ultimate:coding-apps-website-web-dev-api-cloud-bold";
+  if (icone.toLowerCase() === "react") return "material-icon-theme:react";
+  if (icone.toLowerCase() === "nuxt ui") return "devicon:nuxtjs";
+
+  return "";
+}
 </script>
